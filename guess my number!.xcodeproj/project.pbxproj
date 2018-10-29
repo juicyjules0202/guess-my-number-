@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F50D1F0218692C800CF3B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50D1EF218692C800CF3B11 /* AppDelegate.swift */; };
 		3F50D1F2218692C800CF3B11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50D1F1218692C800CF3B11 /* ViewController.swift */; };
-		3F50D1F5218692C800CF3B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50D1F3218692C800CF3B11 /* Main.storyboard */; };
 		3F50D1F7218692C900CF3B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F50D1F6218692C900CF3B11 /* Assets.xcassets */; };
-		3F50D1FA218692C900CF3B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F50D1F8218692C900CF3B11 /* LaunchScreen.storyboard */; };
 		3F50D205218692C900CF3B11 /* guess_my_number_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50D204218692C900CF3B11 /* guess_my_number_Tests.swift */; };
 		3F50D210218692C900CF3B11 /* guess_my_number_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50D20F218692C900CF3B11 /* guess_my_number_UITests.swift */; };
+		3F73350E21869D4300E67FA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F73350D21869D4300E67FA1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +36,7 @@
 		3F50D1EC218692C800CF3B11 /* guess my number!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guess my number!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50D1EF218692C800CF3B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F50D1F1218692C800CF3B11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F50D1F4218692C800CF3B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F50D1F6218692C900CF3B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F50D1F9218692C900CF3B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F50D1FB218692C900CF3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F50D200218692C900CF3B11 /* guess my number!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "guess my number!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50D204218692C900CF3B11 /* guess_my_number_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guess_my_number_Tests.swift; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		3F50D20B218692C900CF3B11 /* guess my number!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "guess my number!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50D20F218692C900CF3B11 /* guess_my_number_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guess_my_number_UITests.swift; sourceTree = "<group>"; };
 		3F50D211218692C900CF3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F73350D21869D4300E67FA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +97,8 @@
 			children = (
 				3F50D1EF218692C800CF3B11 /* AppDelegate.swift */,
 				3F50D1F1218692C800CF3B11 /* ViewController.swift */,
-				3F50D1F3218692C800CF3B11 /* Main.storyboard */,
+				3F73350D21869D4300E67FA1 /* Main.storyboard */,
 				3F50D1F6218692C900CF3B11 /* Assets.xcassets */,
-				3F50D1F8218692C900CF3B11 /* LaunchScreen.storyboard */,
 				3F50D1FB218692C900CF3B11 /* Info.plist */,
 			);
 			path = "guess my number!";
@@ -229,9 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F50D1FA218692C900CF3B11 /* LaunchScreen.storyboard in Resources */,
 				3F50D1F7218692C900CF3B11 /* Assets.xcassets in Resources */,
-				3F50D1F5218692C800CF3B11 /* Main.storyboard in Resources */,
+				3F73350E21869D4300E67FA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +287,6 @@
 			targetProxy = 3F50D20C218692C900CF3B11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3F50D1F3218692C800CF3B11 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F50D1F4218692C800CF3B11 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3F50D1F8218692C900CF3B11 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F50D1F9218692C900CF3B11 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3F50D212218692C900CF3B11 /* Debug */ = {
