@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblMain: UILabel!
     @IBOutlet weak var lblMin: UILabel!
     @IBOutlet weak var lblMax: UILabel!
+    @IBOutlet weak var lblGuess: UILabel!
     @IBOutlet weak var btnConfirmation: UIButton!
     @IBOutlet weak var sliderForNumber: UISlider!
     
