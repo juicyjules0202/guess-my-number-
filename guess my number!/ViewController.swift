@@ -10,6 +10,9 @@ import UIKit
     //variables and shitee
     var minimumGuess = 1
     var maximumGuess = 100
+    var guess = 50
+    var answerToRound = Int(arc4random_uniform(100)) + 1
+    var guessAmt = 7
 class ViewController: UIViewController {
     //defining UI
     
@@ -19,13 +22,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblGuess: UILabel!
     @IBOutlet weak var btnConfirmation: UIButton!
     @IBOutlet weak var sliderForNumber: UISlider!
-    @IBOutlet weak var asdf: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sliderForNumber.minimumValue = Float(Int(minimumGuess))
         sliderForNumber.maximumValue = Float(Int(maximumGuess))
         lblMain.text = "Guess the number!"
+        lblGuess.text = "\(guess)"
+        print(answerToRound)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,7 +38,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func ValueChangeTest(_ sender: Any) {
+   
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        guess = Int(sender.value)
+        lblGuess.text = "\(guess)"
+    }
+    @IBAction func executeGuess(_ sender: Any) {
         
     }
     
