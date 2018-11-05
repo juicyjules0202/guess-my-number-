@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         sliderForNumber.maximumValue = Float(Int(maximumGuess))
         lblMain.text = "Guess the number!"
         lblGuess.text = "\(guess)"
+        lblMax.text = "\(maximumGuess)"
+        lblMin.text = "\(minimumGuess)"
         print(answerToRound)
         // Do any additional setup after loading the view, typically from a nib.
     }
