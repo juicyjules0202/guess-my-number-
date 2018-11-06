@@ -12,10 +12,11 @@ import UIKit
     var maximumGuess = 100
     var guess = 50
     var answerToRound = Int(arc4random_uniform(100)) + 1
-    var guessAmt = 7
+    var guessesLeft = 7
 class ViewController: UIViewController {
     //defining UI
     
+    @IBOutlet weak var lblGuesses: UILabel!
     @IBOutlet weak var lblMain: UILabel!
     @IBOutlet weak var lblMin: UILabel!
     @IBOutlet weak var lblMax: UILabel!
@@ -45,8 +46,32 @@ class ViewController: UIViewController {
         guess = Int(sender.value)
         lblGuess.text = "\(guess)"
     }
+    func commonFiles() {
+        if guessesLeft == 2 {
+            lblMain.text = "last chance left!"
+        } else if guessesLeft == 1{
+            lblMain.text = "you died apparently ;-;"
+        }
+        guessesLeft -= 1
+        sliderForNumber.minimumValue = Float(minimumGuess)
+        sliderForNumber.maximumValue = Float(maximumGuess)
+    }
     @IBAction func executeGuess(_ sender: Any) {
-        
+        if minimumGuess != maximumGuess && guessesLeft != 0{
+            if guess == answerToRound{
+                lblMain.text = "you won in \(guessesLeft) guesses!"
+            } else if guess < answerToRound{
+                lblMain.text = "No, not yet there..."
+                minimumGuess = guess + 1
+            } else {
+                lblMain.text = "whoa there where y' goin'"
+                maximumGuess = guess - 1
+            }
+            commonFiles()
+        }else{
+            lblMain.text = "the round is over :P"
+            lblGuesses.text = "press reset already"
+        }
     }
     
 
