@@ -84,11 +84,13 @@ class ViewController: UIViewController {
             if guess == answerToRound{
                 lblMain.text = "you won in \(originalGuesses - guessesLeft + 1) guesses!"
             } else if guess < answerToRound{
-                lblMain.text = "No, not yet there..."
+                lblMain.text = "That's too low..."
                 minimumGuess = guess + 1
+                lblMin.text = "\(minimumGuess)"
             } else {
-                lblMain.text = "whoa there where y' goin'"
+                lblMain.text = "Too high!"
                 maximumGuess = guess - 1
+                lblMax.text = "\(maximumGuess)"
             }
             commonFiles()
         }else{
