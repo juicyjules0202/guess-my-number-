@@ -17,6 +17,9 @@ import UIKit
 class ViewController: UIViewController {
     //defining UI
     
+    @IBOutlet weak var btnMinus: UIButton!
+    @IBOutlet weak var btnPlus: UIButton!
+    @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnRESET: UIButton!
     @IBOutlet weak var lblGuesses: UILabel!
     @IBOutlet weak var lblMain: UILabel!
@@ -29,6 +32,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnPlus.isHidden = true
+        btnMinus.isHidden = true
         answerToRound = Int(arc4random_uniform(100)) + 1
         sliderForNumber.minimumValue = Float(Int(minimumGuess))
         sliderForNumber.maximumValue = Float(Int(maximumGuess))
@@ -63,6 +68,10 @@ class ViewController: UIViewController {
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         guess = Int(sender.value)
         lblGuess.text = "your guess is:\(guess)"
+    }
+    
+    @IBAction func actSettings(_ sender: Any) {
+        
     }
     func commonFiles() {
         if guessesLeft == 2 {

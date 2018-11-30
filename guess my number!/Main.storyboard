@@ -46,6 +46,14 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N8v-Nf-7Ry"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZy-fg-9vk">
+                                <rect key="frame" x="281" y="487" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="✅"/>
+                                <connections>
+                                    <action selector="executeGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANF-6r-Nal"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblMax" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-U6-JM6">
                                 <rect key="frame" x="222" y="385" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,14 +69,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblGuesses got nice enlargg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-YH-1bk">
-                                <rect key="frame" x="57" y="225" width="262" height="27"/>
+                                <rect key="frame" x="69" y="225" width="240" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sJ-0r-Fxb">
-                                <rect key="frame" x="283" y="602" width="62" height="45"/>
+                                <rect key="frame" x="299" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="RESET"/>
                                 <connections>
@@ -82,13 +90,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZy-fg-9vk">
-                                <rect key="frame" x="281" y="487" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-Dv-o92">
+                                <rect key="frame" x="30" y="617" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="✅"/>
+                                <state key="normal" title="SETTINGS"/>
                                 <connections>
-                                    <action selector="executeGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANF-6r-Nal"/>
+                                    <action selector="actSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GmE-PG-Gyk"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzo-fY-9Ak">
+                                <rect key="frame" x="31" y="222" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iin-DO-Ihj">
+                                <rect key="frame" x="317" y="222" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,7 +114,10 @@
                     </view>
                     <connections>
                         <outlet property="btnConfirmation" destination="sZy-fg-9vk" id="oRZ-X6-8aY"/>
+                        <outlet property="btnMinus" destination="lzo-fY-9Ak" id="qEx-XQ-rl3"/>
+                        <outlet property="btnPlus" destination="Iin-DO-Ihj" id="orw-TF-b9M"/>
                         <outlet property="btnRESET" destination="4sJ-0r-Fxb" id="A10-Es-ab2"/>
+                        <outlet property="btnSettings" destination="yDi-Dv-o92" id="Zqv-OH-A11"/>
                         <outlet property="lblGuess" destination="xCj-oj-9zx" id="KSg-Ff-geF"/>
                         <outlet property="lblGuesses" destination="gnM-YH-1bk" id="JgC-Lg-xNp"/>
                         <outlet property="lblMain" destination="t6c-UZ-fWq" id="rzz-5d-njB"/>
