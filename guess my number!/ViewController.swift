@@ -12,14 +12,15 @@ import UIKit
     var maximumGuess = 100
     var guess = 50
     var answerToRound = Int(arc4random_uniform(100)) + 1
-    var guessesLeft = 7
-    var originalGuesses = 7
+    var guessesLeft = 6
+    var originalGuesses = 6
+    var inSettings = false
 class ViewController: UIViewController {
     //defining UI
     
+    @IBOutlet weak var lblDifficulty: UILabel!
     @IBOutlet weak var btnMinus: UIButton!
     @IBOutlet weak var btnPlus: UIButton!
-    @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnRESET: UIButton!
     @IBOutlet weak var lblGuesses: UILabel!
     @IBOutlet weak var lblMain: UILabel!
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerToRound = Int(arc4random_uniform(100)) + 1
         btnPlus.isHidden = true
         btnMinus.isHidden = true
         answerToRound = Int(arc4random_uniform(100)) + 1
@@ -53,6 +55,7 @@ class ViewController: UIViewController {
    
 
     @IBAction func actReset(_ sender: Any) {
+        answerToRound = Int(arc4random_uniform(100)) + 1
         minimumGuess = 1
         maximumGuess = 100
         guessesLeft = originalGuesses
@@ -64,15 +67,14 @@ class ViewController: UIViewController {
         lblMin.text = "\(minimumGuess)"
         print(answerToRound)
         lblGuesses.text = "you have \(guessesLeft) guesses left!"
+        lblGuess.text = "your guess is:\(guess)"
     }
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         guess = Int(sender.value)
         lblGuess.text = "your guess is:\(guess)"
     }
     
-    @IBAction func actSettings(_ sender: Any) {
-        
-    }
+
     func commonFiles() {
         if guessesLeft == 2 {
             lblMain.text = "last chance left!"
@@ -81,6 +83,7 @@ class ViewController: UIViewController {
                 lblMain.text = "near miss bro"
             }else{
             lblMain.text = "you died apparently ;-;"
+                lblGuess.text = "it was \(answerToRound) ;-;"
             }
         }
         guessesLeft -= 1

@@ -90,14 +90,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDi-Dv-o92">
-                                <rect key="frame" x="30" y="617" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SETTINGS"/>
-                                <connections>
-                                    <action selector="actSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GmE-PG-Gyk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzo-fY-9Ak">
                                 <rect key="frame" x="31" y="222" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,7 +109,7 @@
                         <outlet property="btnMinus" destination="lzo-fY-9Ak" id="qEx-XQ-rl3"/>
                         <outlet property="btnPlus" destination="Iin-DO-Ihj" id="orw-TF-b9M"/>
                         <outlet property="btnRESET" destination="4sJ-0r-Fxb" id="A10-Es-ab2"/>
-                        <outlet property="btnSettings" destination="yDi-Dv-o92" id="Zqv-OH-A11"/>
+                        <outlet property="lblDifficulty" destination="AQM-z0-Iir" id="Czc-RO-atT"/>
                         <outlet property="lblGuess" destination="xCj-oj-9zx" id="KSg-Ff-geF"/>
                         <outlet property="lblGuesses" destination="gnM-YH-1bk" id="JgC-Lg-xNp"/>
                         <outlet property="lblMain" destination="t6c-UZ-fWq" id="rzz-5d-njB"/>
